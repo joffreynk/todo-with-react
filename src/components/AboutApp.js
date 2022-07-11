@@ -7,7 +7,7 @@ const AboutApp = () => (
       <h2>About the application</h2>
       <strong>TODO LIST</strong>
       <p>
-        powerful App that helps users to add, complete and remove activities on activity menu
+        powerful App that helps users to add, complete, edit and remove activities on activity menu
       </p>
     </div>
   </div>
