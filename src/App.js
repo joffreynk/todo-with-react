@@ -10,14 +10,24 @@ import AboutApp from './components/AboutApp';
 function App() {
   const [menu, setMenu] = useState(true);
   return (
-    <div className={ 'App' }>
+    <div className="App">
       <BrowserRouter>
-        {menu ? <button type={ 'button' } onClick={ () => setMenu(false)} className={ 'hamburger' }><GiHamburgerMenu /></button> : <PopUp setMenu = { setMenu } />}
+        {menu ? (
+          <button
+            type="button"
+            onClick={() => setMenu(false)}
+            className="hamburger"
+          >
+            <GiHamburgerMenu />
+          </button>
+        ) : (
+          <PopUp setMenu={setMenu} />
+        )}
         <Routes>
-          <Route path={ '/' } element={ <Todos/> } />
-          <Route path={ '/about' } element={ <About /> } />
-          <Route path ={ '/about/app' } element={ <AboutApp /> } />
-          <Route path ={ '/about/author' } element={ <AboutAuthor /> } />
+          <Route path="/" element={<Todos />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about/app" element={<AboutApp />} />
+          <Route path="/about/author" element={<AboutAuthor />} />
         </Routes>
       </BrowserRouter>
     </div>
