@@ -26,7 +26,6 @@ function Todo(props) {
   return (
     <ul>
       {list}
-      ;
     </ul>
   );
 }

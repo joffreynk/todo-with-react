@@ -46,7 +46,8 @@ function Todos() {
   };
 
   const removeTodo = (id) => {
-    const newTodo = todo.filter((newT) => newT.id !== Number(id));
+    const newTodo = todo.filter((newT) => newT.id !== Number(id))
+      .map((td, i) => ({ ...td, id: i + 1 }));
     setTodo(newTodo);
     saveLocal(newTodo);
   };
