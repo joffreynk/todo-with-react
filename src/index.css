@@ -1,13 +1,148 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  margin: 100px 30px 0 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.all-todo {
+  width: 80%;
+  min-width: 10px;
+  font-size: 17px;
+  padding-left: 15px;
+}
+
+form {
+  border: 1px solid rgb(224, 222, 222);
+  border-radius: 25px;
+}
+
+form,
+.todo {
+  border-bottom: 1px solid rgb(224, 222, 222);
+  padding: 8px 5px;
+  margin-bottom: 10px;
+}
+
+.todo {
+  list-style: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+.editable:focus {
+  border: 1px solid gainsboro;
+  font-size: 25px;
+  padding: 6px 0;
+  border-radius: 4px;
+}
+
+.btn {
+  float: right;
+  color: green;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.todo .btn {
+  color: rgb(219, 3, 3);
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  border: 3px solid cyan;
+}
+
+.btn-checked {
+  text-decoration: line-through;
+  color: rgb(100, 8, 8);
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+}
+
+.sideBar,
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px;
+}
+
+.hamburger {
+  font-size: 50px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.closeIcon {
+  font-size: 50px;
+  background-color: aqua;
+  cursor: pointer;
+  color: #fff;
+}
+
+.sideBar {
+  bottom: 0;
+  right: 80%;
+  background-color: aqua;
+}
+
+.manyAbouts {
+  display: flex;
+  gap: 50px;
+}
+
+.about {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+}
+
+.links {
+  align-self: flex-start;
+  padding: 5px 10px;
+  background-color: rgb(167, 167, 167);
+  border-radius: 6px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+p {
+  font-size: 18px;
+}
+
+p a {
+  text-decoration: none;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 12px;
+}
+
+@media only screen and (min-width: 766px) {
+  .todos {
+    width: 60%;
+    margin-left: 30%;
+  }
 }
